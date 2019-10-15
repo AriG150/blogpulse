@@ -12,6 +12,7 @@ app.use(express.urlencoded({extended: false}));
 app.use(ejsLayouts);
 
 app.use('/authors', require('./routes/authors'));
+app.use('/posts', require('./routes/posts'));
 
 
 app.listen(3000);
