@@ -1,6 +1,27 @@
-<h2> <%= post.title%> </h2>
+<h2> Post title: <%= post.title%> </h2>
 
 <p> by <%= author.name %></p>
 
-<p> <%= post.content %></p>
+<p> <%= post.message %></p>
+<p> <%= post.name %></p>
+
+<hr>
+
+<h3>All comments:</h3>
+  <% comments.forEach(function(comment){ %>
+    <p> <%= comment.name %></p>
+    <p> <%=  comment.message %> </p>
+  <% }) %>
+<hr>
+
+
+
+
+<h3> Comment on this post </h3>
+<form action="/posts/<%= post.id %>/comments" method="post">
+    <input type="text" name="name" id="name" placeholder="What's your name?">
+    <input type="text" name="message" placeholder="What would you like to say?">
+    <input type="submit" value="Add a Comment">
+</form>
+
 
