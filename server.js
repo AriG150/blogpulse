@@ -13,6 +13,7 @@ app.use(ejsLayouts);
 
 app.use('/authors', require('./routes/authors'));
 app.use('/posts', require('./routes/posts'));
+app.use('/comments', require('/routes/comments'));
 
 
 app.listen(3000);
